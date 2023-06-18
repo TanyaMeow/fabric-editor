@@ -1,0 +1,14 @@
+@use "Common";
+
+.working_field {
+  width: Common.$wh100;
+  margin: 20px;
+  border: 1px solid #413c52cc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.canvas_field  {
+  width: Common.$wh100;
+  height: Common.$wh100;
+}
