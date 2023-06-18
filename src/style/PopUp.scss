@@ -1,0 +1,50 @@
+@use "Common";
+
+.popup{
+  z-index: 1;
+  display: flex;
+  width: Common.$wh100;
+  height: Common.$wh100;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup .popup_content{
+  max-width: Common.$wh100;
+  height: 150px;
+  padding:10px;
+  background-color: #ffffff;
+  border-radius:5px;
+}
+
+.close_button {
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.close_button:hover {
+  cursor: pointer;
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}
+
+.popup_title {
+  margin: 0;
+}
+
+.copy {
+  width: 50px;
+  margin-top: auto;
+  margin-left: auto;
+  border: none;
+  background-color: white;
+}
