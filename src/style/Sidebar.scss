@@ -1,0 +1,80 @@
+@use "Common";
+
+.sidebar {
+  background-color: #1f202e;
+  flex-basis: 25%;
+}
+
+.block_bar_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0 0 20px;
+}
+
+.bar_item {
+  display: flex;
+  line-height: 4em;
+  font-size: 16px;
+  width: Common.$wh100;
+  height: 50px;
+  color: Common.$white;
+  margin-top: 10px;
+  padding-left: 5px;
+  border-bottom: 1px solid rgb(95 95 109);
+  &:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+.button_add {
+  margin: auto 5px 5px auto;
+}
+
+.open_collection {
+  transform: rotate(-90deg);
+  transition: 0.5s;
+  margin: auto 0 7px 5px;
+}
+
+.bar_item:hover,
+.svg_figure:hover {
+  background-color: #262738;
+  transition: 0.5s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu_figure {
+  width: Common.$wh100;
+}
+
+.svg_container {
+  width: Common.$wh100;
+  display: grid;
+  grid-template-columns: repeat(6, 35px);
+  grid-auto-rows: 35px;
+  gap: 5px;
+  color: Common.$white;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #181a28;
+  border-radius: 5px;
+  justify-content: space-evenly;
+}
+
+.new_svg-figure {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  background-color: #82859f;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: #707286;
+    transition: 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
