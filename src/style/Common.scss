@@ -1,0 +1,47 @@
+$wh100: 100%;
+$white: #f4f4ff;
+
+@mixin button_style {
+  width: 100px;
+  height: 25px;
+  background-color: #85c285cc;
+  border: none;
+  border-radius: 5px;
+  color: $white;
+  font-size: 14px;
+}
+
+@mixin button_style-hover {
+  background-color: rgba(133, 194, 133, 0.6);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+* {
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+body,
+html {
+  width: $wh100;
+  height: $wh100;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  width: $wh100;
+  height: $wh100;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex: 1 0 auto;
+  margin-top: 50px;
+  background-color: #1f202e;
+}
