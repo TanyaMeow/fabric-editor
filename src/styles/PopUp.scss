@@ -1,7 +1,7 @@
 @use "Common";
 
-.popup_active {
-  display: flex !important;
+.popup.popup_active {
+  display: flex;
 }
 
 .popup{
@@ -17,14 +17,10 @@
   justify-content: center;
 }
 
-.popup_content {
+.popup_content{
+  max-width: 550px;
   display: flex;
   flex-direction: column;
-}
-
-.popup .popup_content{
-  max-width: Common.$wh100;
-  height: 150px;
   padding:10px;
   background-color: #ffffff;
   border-radius:5px;
@@ -42,7 +38,12 @@
 }
 
 .popup_title {
+  font-family: 'Arial', serif;
+  color: #f4f4ff;
+  background-color: #181a28;
   margin: 0;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .copy {
@@ -51,4 +52,7 @@
   margin-left: auto;
   border: none;
   background-color: white;
+  &:hover {
+    cursor: pointer;
+  }
 }
