@@ -6,14 +6,13 @@ import {Header} from "./components/Header";
 import {Sidebar} from "./components/Sidebar";
 import {CanvasView} from "./components/CanvasView";
 import {Footer} from "./components/Footer";
+import {PopUp} from "./components/Pop-up";
 
 function App() {
-  // const DrawAdd = makeDrawFigureButton('add', '<svg hui blya>');
-  // const DrawCheck = makeDrawFigureButton('check', 'dsfsafdasf');
-
   return (
     <div className="App">
       <div className="wrapper">
+        <PopUp />
         <Header />
         <div className="main">
           <Sidebar />
@@ -21,7 +20,6 @@ function App() {
         </div>
         <Footer />
       </div>
-      {/*<DrawAdd />*/}
     </div>
   );
 }
