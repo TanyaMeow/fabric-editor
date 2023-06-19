@@ -1,8 +1,12 @@
 @use "Common";
 
+.popup_active {
+  display: flex !important;
+}
+
 .popup{
   z-index: 1;
-  display: flex;
+  display: none;
   width: Common.$wh100;
   height: Common.$wh100;
   background-color: rgba(0,0,0,0.5);
