@@ -49,9 +49,11 @@
   width: Common.$wh100;
 }
 
-.active {
+.menu_svg.active,
+.svg_container.active{
   transition: 0.5s;
-  display: grid !important;
+  height: 95px;
+  display: grid;
 }
 
 .menu_svg {
