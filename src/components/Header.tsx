@@ -5,7 +5,7 @@ export function Header() {
     return (
         <header className="header">
             <div className="tools">
-                <Button className={'save'}
+                <Button name={'save'}
                         text={'Сохранить'}/>
             </div>
         </header>

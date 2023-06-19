@@ -5,9 +5,9 @@ export function Footer() {
     return (
         <footer className="footer">
             <div className="story">
-                <Button className={'undo'}
+                <Button name={'undo'}
                         text={'Назад'}/>
-                <Button className={'redo'}
+                <Button name={'redo'}
                         text={'Вперед'}/>
             </div>
         </footer>
