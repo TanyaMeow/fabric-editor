@@ -2,8 +2,10 @@ import React from "react";
 
 export function Footer() {
     return (
-        <div className="story">
+        <footer className="footer">
+            <div className="story">
 
-        </div>
+            </div>
+        </footer>
     )
 }
