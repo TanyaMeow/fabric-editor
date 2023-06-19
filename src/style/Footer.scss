@@ -11,6 +11,7 @@
 
 .undo {
   @include Common.button_style;
+  margin-right: 10px;
   &:hover {
     @include Common.button_style-hover;
   }
