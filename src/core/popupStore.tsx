@@ -1,7 +1,7 @@
 import {makeAutoObservable} from "mobx";
 
 class PopupStore {
-    public active: boolean = false;
+    public textSvg: string = '';
 
     constructor() {
         makeAutoObservable(this)
