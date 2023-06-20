@@ -47,12 +47,15 @@
 }
 
 .copy {
-  width: 50px;
-  margin-top: auto;
+  margin-top: 10px;
   margin-left: auto;
   border: none;
+  border-radius: 50%;
   background-color: white;
   &:hover {
     cursor: pointer;
+    background-color: rgba(227, 227, 227, 0.61);
+    border-radius: 50%;
+    transition: 0.5s;
   }
 }
