@@ -7,10 +7,10 @@ import {ReactComponent as Star} from "../icons/star.svg";
 import {ReactComponent as Moon} from "../icons/moon.svg";
 import {ReactComponent as Leaf} from "../icons/leaf.svg";
 
-export function makeDrawFigureButton(name: string, data: string) {
+export function makeDrawFigureButton(name: string) {
     return function DrawFigureButton() {
         return (
-            <div className="svg_figure" data-svg={data}>
+            <div className="svg_figure">
                 { name === 'square' ? <Square fill="#F4F4FF"
                                               width="35px"
                                               height="35px"/> : null }
