@@ -1,7 +1,7 @@
 import React from "react";
 
-export function Button({ text, name }: any) {
+export function Button({ text, name, showPopup }: any) {
     return (
-        <button className={name}>{text}</button>
+        <button className={name} onClick={showPopup}>{text}</button>
     )
 }
