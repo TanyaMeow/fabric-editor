@@ -1,4 +1,4 @@
-import React, {ReactSVGElement} from "react";
+import React from "react";
 import {ReactComponent as Square} from "../icons/square.svg";
 import {ReactComponent as Circle} from "../icons/circle.svg";
 import {ReactComponent as Triangle} from "../icons/triagle.svg";
