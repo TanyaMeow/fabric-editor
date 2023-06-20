@@ -1,18 +1,19 @@
 import React from "react";
 import {popupStore} from "../core/popupStore";
 import {observer} from "mobx-react-lite";
+import clipboardCopy from "clipboard-copy";
 
 export const Popup = observer(() => {
     return (
-        <div className={"popup " + (popupStore.active ? "popup_active" : "")}>
+        <div className={"popup " + (popupStore.textSvg ? "popup_active" : "")}>
             <div className="popup_content">
-                <svg onClick={() => popupStore.active = false} className="close_button" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960"
+                <svg onClick={() => popupStore.textSvg = ''} className="close_button" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960"
                      width="25">
                     <path
                         d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
                 </svg>
-                <p className="popup_title">Какой-то текст здесь есть я не знаю насколько длинный бывает SVG код</p>
-                <button className="copy">
+                <p className="popup_title">{popupStore.textSvg}</p>
+                <button onClick={() => clipboardCopy(popupStore.textSvg)} className="copy">
                     <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960"
                          width="35">
                         <path
