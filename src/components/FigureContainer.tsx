@@ -20,9 +20,12 @@ export function FigureContainer({ showMenu }: any) {
             <Moon />
             <Leaf />
             <div className="new_svg-figure">
-                <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25">
-                    <path fill="#f4f4ff" d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/>
-                </svg>
+                <label style={{display: 'flex'}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25">
+                        <path fill="#f4f4ff" d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/>
+                    </svg>
+                    <input style={{display: 'none'}} accept=".svg" type="file" id="file_button"></input>
+                </label>
             </div>
         </div>
     )
