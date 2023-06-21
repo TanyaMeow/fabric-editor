@@ -1,10 +1,8 @@
 import React from "react";
-import {fabric} from "fabric";
-import {Canvas} from "../core/canvasService";
 
-export function NavigationItem({ text }: any) {
+export function NavigationItem({ text, onAdd }: any) {
     return (
-        <a onClick={() => Canvas.getInstance()?.add(new fabric.Text('text'))} href="#" className="bar_item">{text}
+        <a onClick={onAdd} href="#" className="bar_item">{text}
             <svg className="button_add" xmlns="http://www.w3.org/2000/svg" height="25"
                  viewBox="0 -960 960 960" width="25">
                 <path fill="rgba(230, 230, 255, 0.8)"

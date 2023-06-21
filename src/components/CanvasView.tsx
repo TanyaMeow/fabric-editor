@@ -13,8 +13,7 @@ export function CanvasView() {
             return;
         }
 
-        Canvas.getInstance()?.setHeight(workingField.clientHeight);
-        Canvas.getInstance()?.setWidth(workingField.clientWidth);
+        Canvas.setSize(workingField.clientWidth, workingField.clientHeight);
     });
 
     window.addEventListener('resize', () => {
@@ -24,8 +23,7 @@ export function CanvasView() {
             return;
         }
 
-        Canvas.getInstance()?.setHeight(workingField.clientHeight);
-        Canvas.getInstance()?.setWidth(workingField.clientWidth);
+        Canvas.setSize(workingField.clientWidth, workingField.clientHeight);
     });
 
     const canvasComponent = useMemo(
