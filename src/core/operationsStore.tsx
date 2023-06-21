@@ -1,20 +1,8 @@
-import {action, computed, makeObservable, observable} from "mobx";
 import {Canvas} from "./canvasService";
 import {fabric} from "fabric";
 
 class OperationsStore {
     removedItems = [];
-
-    constructor() {
-        makeObservable(this, {
-                removedItems: observable,
-                undo: action,
-                redo: action,
-                hasUndo: computed,
-                hasRedo: computed,
-            }
-        );
-    }
 
     undo() {
         if (!this.hasUndo) {
@@ -34,7 +22,7 @@ class OperationsStore {
         return Canvas.hasObjects();
     }
 
-    get hasRedo() {
+    get hasRedo(): boolean {
         return this.removedItems.length > 0;
     }
 }

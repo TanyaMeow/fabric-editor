@@ -9,7 +9,7 @@ export function Navigation() {
         <div className="block_bar_item">
             <NavigationText onAdd={() => Canvas.addText()}
                             text={'Текст'}/>
-            <NavigationFigure/>
+            <NavigationFigure />
             <NavigationImage />
         </div>
     )

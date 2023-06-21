@@ -1,29 +1,27 @@
-import React, {useEffect, useMemo, useRef, useState} from "react";
+import React, {useEffect, useMemo, useRef} from "react";
 import {Canvas} from "../core/canvasService";
 
 export function CanvasView() {
     const canvasRef = useRef(null);
 
+    function resizeCanvas() {
+        const workingField = document.querySelector('.working_field')
+
+        if (null === workingField) {
+            return;
+        }
+
+        Canvas.setSize(workingField.clientWidth, workingField.clientHeight);
+    }
+
     useEffect(() => {
         Canvas.init(canvasRef.current);
 
-        const workingField = document.querySelector('.working_field')
-
-        if (null === workingField) {
-            return;
-        }
-
-        Canvas.setSize(workingField.clientWidth, workingField.clientHeight);
+        resizeCanvas()
     });
 
     window.addEventListener('resize', () => {
-        const workingField = document.querySelector('.working_field')
-
-        if (null === workingField) {
-            return;
-        }
-
-        Canvas.setSize(workingField.clientWidth, workingField.clientHeight);
+        resizeCanvas()
     });
 
     const canvasComponent = useMemo(
