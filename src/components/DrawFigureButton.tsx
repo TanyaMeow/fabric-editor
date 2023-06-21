@@ -6,11 +6,12 @@ import {ReactComponent as Heart} from "../icons/heart.svg";
 import {ReactComponent as Star} from "../icons/star.svg";
 import {ReactComponent as Moon} from "../icons/moon.svg";
 import {ReactComponent as Leaf} from "../icons/leaf.svg";
+import {Canvas} from "../core/canvasService";
 
 export function makeDrawFigureButton(name: string) {
     return function DrawFigureButton() {
         return (
-            <div className="svg_figure">
+            <div className="svg_figure" onClick={() => Canvas.drawFigure(name)}>
                 { name === 'square' ? <Square fill="#F4F4FF"
                                               width="35px"
                                               height="35px"/> : null }
