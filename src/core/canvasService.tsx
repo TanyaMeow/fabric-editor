@@ -59,4 +59,24 @@ export class Canvas {
             }
         });
     }
+
+    static addObject(element: fabric.Object) {
+        this.canvas?._objects.push(element);
+        this.canvas?.renderAll();
+    }
+
+    static removeLastObject(): fabric.Object | undefined {
+        const removeElement = this.canvas?._objects.pop();
+        this.canvas?.renderAll();
+        return removeElement;
+    }
+
+    static hasObjects(): boolean {
+        if (this.canvas === null) {
+            return false;
+        }
+
+        return this.canvas._objects.length > 0;
+    }
+
 }
