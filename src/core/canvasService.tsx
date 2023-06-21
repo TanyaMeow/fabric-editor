@@ -10,6 +10,18 @@ export class Canvas {
             return;
         }
         this.canvas = new fabric.Canvas(reference);
+        this.canvas.on('mouse:wheel', (opt) => {
+            const delta = opt.e.deltaY;
+            // @ts-ignore
+            let zoom = this.canvas.getZoom();
+            zoom *= 0.999 ** delta;
+            if (zoom > 20) zoom = 20;
+            if (zoom < 0.01) zoom = 0.01;
+            // @ts-ignore
+            this.canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
+            opt.e.preventDefault();
+            opt.e.stopPropagation();
+        });
     }
 
     static setSize(width: number, height: number) {
@@ -78,5 +90,4 @@ export class Canvas {
 
         return this.canvas._objects.length > 0;
     }
-
 }
