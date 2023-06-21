@@ -31,13 +31,32 @@ export class Canvas {
         }
     }
 
-    static drawFigure(nameFigure: string): void {
-        fabric.loadSVGFromString(figuresInfo[nameFigure as keyof figuresType], (figureArr) => {
-            for (const figure of figureArr) {
+    static drawFigure(figureName: string): void {
+        fabric.loadSVGFromString(figuresInfo[figureName as keyof figuresType], (figures) => {
+            for (const figure of figures) {
                 if(this.canvas !== null) {
                     this.canvas.add(figure);
                 }
             }
         })
+    }
+
+    static drawImage(imageUrl: string) {
+        fabric.Image.fromURL(imageUrl, (image) => {
+            if (this.canvas !== null) {
+                image.scale(0.5);
+                this.canvas.add(image);
+            }
+        });
+    }
+
+    static drawSVG(svgUrl: string) {
+        fabric.loadSVGFromURL(svgUrl, (svgList) => {
+            for (const svg of svgList) {
+                if(this.canvas !== null) {
+                    this.canvas.add(svg);
+                }
+            }
+        });
     }
 }
